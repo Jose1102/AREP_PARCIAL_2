@@ -83,7 +83,7 @@ mvn package
 ```
 
 
-### Ejercicio 1
+### Ejecutando
 
 Para ejecutarlo de local
 
@@ -91,7 +91,14 @@ Para ejecutarlo de local
 java -cp "target/classes:target/dependency/*" edu.escuelaing.arep.parcial.App
 ```
 
+Operación con Sin
 
+![Sin](https://github.com/Jose1102/AREP_PARCIAL_2/blob/main/images/seno.PNG)
+
+
+Operación con Log
+
+![log](https://github.com/Jose1102/AREP_PARCIAL_2/blob/main/images/log.PNG)
 
 ## Diagrama de clases 📖
 
