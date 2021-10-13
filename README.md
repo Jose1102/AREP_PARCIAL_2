@@ -82,7 +82,6 @@ git clone https://github.com/Jose1102/AREP_PARCIAL_2
 mvn package
 ```
 
-3. Ejecutar el proyecto 
 
 ### Ejercicio 1
 
