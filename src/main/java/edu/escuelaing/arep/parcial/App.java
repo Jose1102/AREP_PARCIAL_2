@@ -18,10 +18,20 @@ public class App {
         });
 
 
+        get("/log", App::getLog);
         get("/sin", App::getSeno);
     }
 
 
+    private static Object getLog(Request request, Response response) {
+        Double value = Double.valueOf(request.queryParams("value"));
+        Double rta = Calculator.log(value);
+        JSONObject myObject = new JSONObject();
+        myObject.put("operation", "log");
+        myObject.put("input", value);
+        myObject.put("output", Calculator.log(value));
+        return myObject;
+    }
 
 
 
@@ -29,7 +39,7 @@ public class App {
         Double value = Double.valueOf(request.queryParams("value"));
         Double rta = Calculator.seno(value);
         JSONObject myObject = new JSONObject();
-        myObject.put("operation", "seno");
+        myObject.put("operation", "sin");
         myObject.put("input", value);
         myObject.put("output", Calculator.seno(value));
         return myObject;

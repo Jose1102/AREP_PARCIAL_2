@@ -12,5 +12,10 @@ public class Calculator {
         return seno;
     }
 
+    public static Double log(Double value){
+        Double log =  Math.log10(value);
+        return log;
+    }
+
 
 }
