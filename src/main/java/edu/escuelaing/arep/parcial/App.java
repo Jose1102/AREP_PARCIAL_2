@@ -5,10 +5,18 @@ import org.json.simple.JSONObject;
 import spark.Request;
 import spark.Response;
 
+/**
+ * @author Jose Maria Castro Ortega
+ * Clase principal del programa, se usa spark
+ */
 public class App {
 
     //private static Calculator calculator = new Calculator();
 
+    /**
+     * Método main que realiza el llamado get de spark para llamar las operaciones matemáticas
+     * @param args
+     */
     public static void main(String... args){
         port(getPort());
 
@@ -23,6 +31,12 @@ public class App {
     }
 
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @return myObject que es de tipo Object, es el json con la operación matemática log
+     */
     private static Object getLog(Request request, Response response) {
         Double value = Double.valueOf(request.queryParams("value"));
         Double rta = Calculator.log(value);
@@ -34,7 +48,12 @@ public class App {
     }
 
 
-
+    /**
+     *
+     * @param request
+     * @param response
+     * @return myObject que es de tipo Object, es el JSON con la operación matemática seno
+     */
     private static Object getSeno(Request request, Response response) {
         Double value = Double.valueOf(request.queryParams("value"));
         Double rta = Calculator.seno(value);
@@ -45,6 +64,10 @@ public class App {
         return myObject;
     }
 
+    /**
+     *
+     * @return 5000 que es el puerto 
+     */
     private static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
